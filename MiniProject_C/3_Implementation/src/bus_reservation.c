@@ -263,7 +263,7 @@ int status(int busno)
 
    if(busno>0&&busno<6){
 
-   int i,busno,index=0,j;
+   int i,index=0,j;
     j=read_number(busno);
     read_name(busno);
     printf("____________________________________________________________________________________________________________________\n");
