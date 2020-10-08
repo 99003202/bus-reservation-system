@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include"bus_reservation.h""
+#include "bus_reservation.h"
 int busno;
 
 int main()
@@ -68,14 +68,14 @@ int main()
             status(busno);
             break;
         }
-  getch();
+        getch();
     }while(num != 5);
          system("CLS");
          printf("\t----------------------------------------------------------------------------------------------------------\n");
          printf("\t\t\t\t\tThank You For Using This System\t\t\t\t\t\t\n");
          printf("\t----------------------------------------------------------------------------------------------------------\n");
 
-  getch();
+
   return 0;
   }
 

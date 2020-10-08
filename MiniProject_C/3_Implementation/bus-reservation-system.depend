@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1602178766 source:c:\users\dhyan nandan\desktop\bus-reservation-system\miniproject_c\3_implementation\main.c
+1602182036 source:c:\users\dhyan nandan\desktop\bus-reservation-system\miniproject_c\3_implementation\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -10,7 +10,7 @@
 	<stdlib.h>
 	<string.h>
 
-1602178762 source:c:\users\dhyan nandan\desktop\bus-reservation-system\miniproject_c\3_implementation\src\bus_reservation.c
+1602181968 source:c:\users\dhyan nandan\desktop\bus-reservation-system\miniproject_c\3_implementation\src\bus_reservation.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

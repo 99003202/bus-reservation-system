@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include"bus_reservation.h"
+#include "bus_reservation.h"
 
 char ch[10][130]={"Bus No. 1  [8:00 A.M ] Kannur-> Kasaragod","Bus No. 2  [8:30 A.M ] Kannur-> Kozhikode","Bus No. 3  [9:00 A.M ] Kannur-> Kochi","Bus No. 4  [1:30 P.M ] Kannur-> Chennai","Bus No. 5  [6:00 P.M ] Kannur-> Bangalore","bus 6"};
 char name[32][100]={'\0'};
@@ -285,6 +285,7 @@ int status(int busno)
             }
             printf("\n");
     }
+
 return 1;
 }
 else{printf("The Bus No. Is Not Valid");
