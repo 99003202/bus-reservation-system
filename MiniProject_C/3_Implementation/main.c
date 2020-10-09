@@ -82,7 +82,7 @@ int main()
   else
   {
 
-      printf("\n\t\t\t\t\t WRONG LOGIN CREDENTIALS!!! \n\t\t\t\t\tPlease Verify Your Password!", 5-n);
+      printf("\n\t\t\t\t\t WRONG LOGIN CREDENTIALS!!! \n\t\t\t\t\tPlease Verify Your Password!");
       getch();
       n++;}
 

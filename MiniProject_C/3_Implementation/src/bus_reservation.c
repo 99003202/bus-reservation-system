@@ -198,7 +198,8 @@ char tempstr[100],tempstr2[12]="number";
 FILE *a,*b;
 char numstr[100];
 int i=0,j=0,k;
-itoa(busno,numstr,10);
+//itoa(busno,numstr,10);
+sprintf(numstr,"%d",busno);
 strcat(numstr,".txt");
 strcat(tempstr2,numstr);
 a = fopen(tempstr2,"a+");//for open the file to write the name in the file
@@ -234,7 +235,8 @@ char tempstr1[12]="status";
 FILE *b;
 char numstr[100];
 int i=0,j=0,k=0;
-itoa(busno,numstr,10);
+//itoa(busno,numstr,10);
+sprintf(numstr,"%d",busno);
 strcat(numstr,".txt");
 strcat(tempstr1,numstr);
 b = fopen(tempstr1,"a+");//for open the file to write the name in the file
