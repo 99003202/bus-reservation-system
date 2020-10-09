@@ -28,166 +28,165 @@ int bus()
 
 int booking(int busno)
 {
-if(busno<6&&busno>0)
-{
-   int i=0;
-    char numstr[100];
+	if(busno<6&&busno>0)
+	{
+	   int i=0;
+	    char numstr[100];
 
-system("cls");
-printf("=========================================== BUS RESERVATION SYSTEM ============================================\n\n\n");//for selecting coach
-printf("Your Bus Number is %d ********** %s",busno,ch[busno-1]);
-status_1(busno);
- FILE *f1, *fopen();//for reading the seats from the user.
- char str1[80]="32",str2[4],str3[4];
- int seat1,seat2,booking=0;
-
-if(busno == 1)
-{
- f1 = fopen("bus1.txt","r+");
- fgets(str1,80,f1);
- fclose(f1);
-
-}else if(busno == 2)
-{
- f1 = fopen("bus2.txt","r+");
- fgets(str1,80,f1);
- fclose(f1);
-
-}else if(busno == 3)
-{
- f1 = fopen("bus3.txt","r+");
- fgets(str1,80,f1);
- fclose(f1);
-
-}
-else if(busno == 4)
-{
- f1 = fopen("bus4.txt","r+");
- fgets(str1,80,f1);
- fclose(f1);
-
-}
-else if(busno == 5)
-{
- f1 = fopen("bus5.txt","r+");
- fgets(str1,80,f1);
- fclose(f1);
-
-}
-seat1=atoi(str1);//covert the string into number
-if(seat1 <= 0)
-{
- printf("There is no blank seat in this bus ");
-}else
-{
-printf("\n\n\n\t\t\t\tAvailable Seats:------>%d\n",seat1);
-printf("\n\t\t\t\tNumber of Tickets:----->");
-scanf("%d",&booking);
-printf("\n");
-//itoa(busno,numstr,10);
-sprintf(numstr,"%d",busno);
-if(name_number(booking,numstr)==1){
-
-
-seat1=seat1-booking;
-
-
-
-//itoa(seat1, str1, 10);
-sprintf(str1,"%d",seat1);
-//for reading the seats from the user.
-if(busno == 1)
-{
- f1 = fopen("bus1.txt","w");
- fputs(str1,f1);
- fclose(f1);
-}
-else if(busno == 2)
-{
- f1 = fopen("bus2.txt","w");
- fputs(str1,f1);
-  fclose(f1);
-}
-else if(busno == 3)
-{
- f1 = fopen("bus3.txt","w");
- fputs(str1,f1);
-  fclose(f1);
-}
-else if(busno == 4)
-{
- f1 = fopen("bus4.txt","w");
- fputs(str1,f1);
-  fclose(f1);
-}
-else if(busno == 5)
-{
- f1 = fopen("bus5.txt","w");
- fputs(str1,f1);
- fclose(f1);
-}
-
-}
-}
-
-
-
-
-return 1;
-}
-else{
 	system("cls");
-	printf("\n\n\n\n\n\n\t\t\t\t\t\tINVALID BUS SELECTION!!!");
-}
-return 0;
-}
+	printf("=========================================== BUS RESERVATION SYSTEM ============================================\n\n\n");//for selecting coach
+	printf("Your Bus Number is %d ********** %s",busno,ch[busno-1]);
+	status_1(busno);
+	 FILE *f1, *fopen();//for reading the seats from the user.
+	 char str1[80]="32",str2[4],str3[4];
+	 int seat1,seat2,booking=0;
 
+	if(busno == 1)
+	{
+	 f1 = fopen("bus1.txt","r+");
+	 fgets(str1,80,f1);
+	 fclose(f1);
 
+	}else if(busno == 2)
+	{
+	 f1 = fopen("bus2.txt","r+");
+	 fgets(str1,80,f1);
+	 fclose(f1);
 
+	}else if(busno == 3)
+	{
+	 f1 = fopen("bus3.txt","r+");
+	 fgets(str1,80,f1);
+	 fclose(f1);
 
-int name_number(int booking,char numstr[100])
-{
+	}
+	else if(busno == 4)
+	{
+	 f1 = fopen("bus4.txt","r+");
+	 fgets(str1,80,f1);
+	 fclose(f1);
+
+	}
+	else if(busno == 5)
+	{
+	 f1 = fopen("bus5.txt","r+");
+	 fgets(str1,80,f1);
+	 fclose(f1);
+
+	}
+	seat1=atoi(str1);//covert the string into number
+	if(seat1 <= 0)
+	{
+	 printf("There is no blank seat in this bus ");
+	}else
+	{
+	printf("\n\n\n\t\t\t\tAvailable Seats:------>%d\n",seat1);
+	printf("\n\t\t\t\tNumber of Tickets:----->");
+	scanf("%d",&booking);
+	printf("\n");
+	//itoa(busno,numstr,10);
+	sprintf(numstr,"%d",busno);
+	int number;
+	char names[100];
+
 	if(booking<=32&&booking>0){
 
-char tempstr[100],tempstr1[12]="status",tempstr2[12]="number";
-int number;
-    FILE *a,*b;
-    int i=0;
-   strcat(numstr,".txt");
-   strcat(tempstr1,numstr);
-   strcat(tempstr2,numstr);
-   a = fopen(tempstr1,"a");//for open the file to write the name in the file
-   b = fopen(tempstr2,"a");//for open the file for writing the number in the file
-for(i=0; i<booking; i++)//for entering the person name and seat number in the file
-{
-    printf("============================Enter the details for ticket no %d============================\n\n\n",i+1);
-      printf("\t\t\t\tEnter the seat number:--->");
-      scanf("%d",&number);
-      printf("\t\t\t\tEnter the name of person:--->");
-      scanf("%s",name[number-1]);
-    printf("\n======================================================================================================\n\n");
-    printf("\n");
-      //itoa(number, tempstr, 10);
-      sprintf(tempstr,"%d",number);
-      fprintf(a,"%s ",name[number-1]);
-      fprintf(b,"%s ",tempstr);
+		for(i=0; i<booking; i++)//for entering the person name and seat number in the file
+		{
+		    printf("============================Enter the details for ticket no %d============================\n\n\n",i+1);
+			printf("\t\t\t\tEnter the seat number:--->");
+			scanf("%d",&number);
+			printf("\t\t\t\tEnter the name of person:--->");
+			scanf("%s",names);
+			printf("\n======================================================================================================\n\n");
+			printf("\n");
+			book(numstr,number,names);
 
-}
-fclose(a);
-fclose(b);
+		}
 
-printf("-----------------TICKET-------------------------------TICKET-------------------------------TICKET-------------------\n");
-printf("\n   Note-->: A snapshot of this page with valid ID proof will serve as TICKET!!! No Hardcopy Required\n");
-printf("\n\n\t\t\t\tNo Of Seats Reserved : %d",booking);
-printf("\n\t\t\t\tThe Total booking amount is %d Rs",200*booking);
-printf("\n\t\t\t\tBooking Success!!!\n\n");
-printf("\n-----------------TICKET-------------------------------TICKET-------------------------------TICKET-------------------\n");
-return 1;
-}
-else{
-	printf("\n\n\n\n\n\t\t\t\t\t Only 32 Seats Available!!!\n\n");
-}
+		seat1=seat1-booking;
+
+		//itoa(seat1, str1, 10);
+		sprintf(str1,"%d",seat1);
+		//for reading the seats from the user.
+		if(busno == 1)
+		{
+		 f1 = fopen("bus1.txt","w");
+		 fputs(str1,f1);
+		 fclose(f1);
+		}
+		else if(busno == 2)
+		{
+		 f1 = fopen("bus2.txt","w");
+		 fputs(str1,f1);
+		  fclose(f1);
+		}
+		else if(busno == 3)
+		{
+		 f1 = fopen("bus3.txt","w");
+		 fputs(str1,f1);
+		  fclose(f1);
+		}
+		else if(busno == 4)
+		{
+		 f1 = fopen("bus4.txt","w");
+		 fputs(str1,f1);
+		  fclose(f1);
+		}
+		else if(busno == 5)
+		{
+		 f1 = fopen("bus5.txt","w");
+		 fputs(str1,f1);
+		 fclose(f1);
+		}
+		printf("-----------------TICKET-------------------------------TICKET-------------------------------TICKET-------------------\n");
+	printf("\n   Note-->: A snapshot of this page with valid ID proof will serve as TICKET!!! No Hardcopy Required\n");
+	printf("\n\n\t\t\t\tNo Of Seats Reserved : %d",booking);
+	printf("\n\t\t\t\tThe Total booking amount is %d Rs",200*booking);
+	printf("\n\t\t\t\tBooking Success!!!\n\n");
+	printf("\n-----------------TICKET-------------------------------TICKET-------------------------------TICKET-------------------\n");
+
+	}
+	else{
+		printf("\n\n\n\n\n\t\t\t\t\t Only 32 Seats Available!!!\n\n");
+	}
+	}
+
+
+
+
+	return 1;
+	}
+	else{
+		system("cls");
+		printf("\n\n\n\n\n\n\t\t\t\t\t\tINVALID BUS SELECTION!!!");
+	}
 	return 0;
+}
+
+
+
+int book(char numstr[100],int number,char names[100])
+{
+
+	char tempstr[100],tempstr1[12]="status",tempstr2[12]="number";
+
+	FILE *a,*b;
+	int i=0;
+	strcat(numstr,".txt");
+	strcat(tempstr1,numstr);
+	strcat(tempstr2,numstr);
+	a = fopen(tempstr1,"a");//for open the file to write the name in the file
+	b = fopen(tempstr2,"a");//for open the file for writing the number in the file
+	itoa(number, tempstr, 10);
+	fprintf(a,"%s ",names);
+	fprintf(b,"%s ",tempstr);
+	fclose(a);
+	fclose(b);
+
+
+	return 1;
+
 }
 
 

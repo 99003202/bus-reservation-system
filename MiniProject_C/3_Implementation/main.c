@@ -6,7 +6,6 @@ int busno;
 
 int main()
 {
-
     char username[]="user", password[]="pass", id[8], p[6];
     int n=1, x, y;
     printf("\n========================================== BUS RESERVATION SYSTEM ======================================================");
