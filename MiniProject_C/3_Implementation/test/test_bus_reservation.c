@@ -7,6 +7,7 @@
 #define PROJECT_NAME    "bus_reservation"
 
 /* Prototypes for all the test functions */
+void test_login(void);
 void test_bus(void);
 void test_book(void);
 void test_read_number(void);
@@ -26,6 +27,7 @@ int main() {
 
 
   /* Add your test functions in this format for testing*/
+   CU_add_test(suite,"login",test_login);
   CU_add_test(suite,"bus",test_bus);
   CU_add_test(suite,"book",test_book);
   CU_add_test(suite,"read_number",test_read_number);
@@ -48,6 +50,19 @@ int main() {
 }
 
 /* Write all the test functions */
+void test_book(void)
+{
+    char username[100]="user";
+    char password[100]="pass";
+    CU_ASSERT(1==login(username,password));
+    char username1[100]="user";
+    char password1[100]="abc";
+    CU_ASSERT(0==login(username,password));
+
+
+}
+
+
 void test_bus(void)
 {
     CU_ASSERT(1==bus(1));

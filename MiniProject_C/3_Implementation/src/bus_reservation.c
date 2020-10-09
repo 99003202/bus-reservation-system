@@ -8,6 +8,16 @@ char name[32][100]={'\0'};
 char number[32][2]={'\0'};
 int num1[32]={0};
 
+int login(char *username,char *password)
+{
+    int x,y;
+     x=strcmp(username, "user");
+     y=strcmp(password, "pass");
+     if(x==0 && y==0){
+        return 1;
+     }
+     return 0;
+}
 int bus()
 {
     system("cls");

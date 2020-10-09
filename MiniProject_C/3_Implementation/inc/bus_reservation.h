@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+int login(char *username,char *password);
 int bus();//shows list of busses
 int book(char *numstr,int booking,char *names);
 int booking(int busno);//for booking tickets

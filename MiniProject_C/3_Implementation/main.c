@@ -7,7 +7,7 @@ int busno;
 int main()
 {
     char username[]="user", password[]="pass", id[8], p[6];
-    int n=1, x, y;
+    int n=1;
     printf("\n========================================== BUS RESERVATION SYSTEM ======================================================");
     do{
 
@@ -18,10 +18,9 @@ int main()
          printf("\nEnter Password:");
          scanf("%s", &p);
 
-         x=strcmp(id, "user");
-         y=strcmp(p, "pass");
+
         printf("\n\n************************************************************************************************************************");
-    if(x==0 && y==0)
+    if(login(id,p)==1)
     {
      int num,i;
      do{
