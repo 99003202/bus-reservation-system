@@ -84,7 +84,8 @@ printf("\n\n\n\t\t\t\tAvailable Seats:------>%d\n",seat1);
 printf("\n\t\t\t\tNumber of Tickets:----->");
 scanf("%d",&booking);
 printf("\n");
-itoa(busno,numstr,10);
+//itoa(busno,numstr,10);
+sprintf(numstr,"%d",busno);
 if(name_number(booking,numstr)==1){
 
 
@@ -92,7 +93,8 @@ seat1=seat1-booking;
 
 
 
-itoa(seat1, str1, 10);
+//itoa(seat1, str1, 10);
+sprintf(str1,"%d",seat1);
 //for reading the seats from the user.
 if(busno == 1)
 {
@@ -333,7 +335,8 @@ int cancel(int busno)
  int seat_no,i,j;
  char numstr[100],tempstr2[15]="number",tempstr1[15]="status";
 
- itoa(busno,numstr,10);
+ //itoa(busno,numstr,10);
+ sprintf(numstr,"%d",busno);
  strcat(numstr,".txt");
  strcat(tempstr1,numstr);
  strcat(tempstr2,numstr);
