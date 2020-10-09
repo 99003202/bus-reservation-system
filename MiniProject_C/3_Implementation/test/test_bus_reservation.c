@@ -87,7 +87,7 @@ void test_read_name(void)
 }
 void test_status_1(void)
 {
-  CU_ASSERT(1==status_1(1)));
+  CU_ASSERT(1==status_1(1));
 
 }
 
