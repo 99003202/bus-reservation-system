@@ -73,7 +73,7 @@ void test_cancel(void)
 
 void test_number_name(void)
 {
-  CU_ASSERT(1==name_number(1,"1"));
+  CU_ASSERT(1==name_number(1,1));
 
 }
 void test_read_number(void)
