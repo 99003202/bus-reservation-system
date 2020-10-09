@@ -53,6 +53,7 @@ int main()
             printf("Enter the Bus number:--->");
             scanf("%d",&busno);
              booking(busno);//for booking tickets
+
              break;
         case 3:
         	printf("Enter the bus number:---->");
