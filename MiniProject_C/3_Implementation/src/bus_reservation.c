@@ -178,7 +178,8 @@ int book(char numstr[100],int number,char names[100])
 	strcat(tempstr2,numstr);
 	a = fopen(tempstr1,"a");//for open the file to write the name in the file
 	b = fopen(tempstr2,"a");//for open the file for writing the number in the file
-	itoa(number, tempstr, 10);
+	//itoa(number, tempstr, 10);
+	sprintf(tempstr,"%d",number);
 	fprintf(a,"%s ",names);
 	fprintf(b,"%s ",tempstr);
 	fclose(a);
