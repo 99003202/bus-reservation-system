@@ -68,7 +68,7 @@ int main()
             status(busno);
             break;
         }
-        getch();
+        fflush(stdin);getchar();
     }while(num != 5);
          system("CLS");
          printf("\t----------------------------------------------------------------------------------------------------------\n");
@@ -83,14 +83,14 @@ int main()
   {
 
       printf("\n\t\t\t\t\t WRONG LOGIN CREDENTIALS!!! \n\t\t\t\t\tPlease Verify Your Password!");
-      getch();
+      fflush(stdin);getchar();
       n++;}
 
       if(n>5)
       {
          printf("\n\n\n---------------------------------------------- ACCESS DENIED!!! --------------------------------------------------------\n\n");
          printf("---------------------------------------- You've Entered Wrong Password 5 times' ----------------------------------------\n\n\n");
-        getch();
+        fflush(stdin);getchar();
       }
 
        }while (n<=5);
