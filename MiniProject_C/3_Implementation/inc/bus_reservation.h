@@ -8,7 +8,7 @@
 #include <string.h>
 
 int bus();//shows list of busses
-int book(char numstr[100],int booking,char names[100]);
+int book(char *numstr,int booking,char *names);
 int booking(int busno);//for booking tickets
 int read_number(int busno);//for reading number from file
 int read_name(int busno);//for reading name from file

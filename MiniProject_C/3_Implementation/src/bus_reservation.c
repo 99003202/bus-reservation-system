@@ -166,7 +166,7 @@ int booking(int busno)
 
 
 
-int book(char numstr[100],int number,char names[100])
+int book(char *numstr,int number,char *names)
 {
 
 	char tempstr[100],tempstr1[12]="status",tempstr2[12]="number";
