@@ -87,7 +87,7 @@ int booking(int busno)
 	//itoa(busno,numstr,10);
 	sprintf(numstr,"%d",busno);
 	int number;
-	char names[100];
+	char *names;
 
 	if(booking<=32&&booking>0){
 
