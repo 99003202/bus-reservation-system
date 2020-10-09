@@ -8,7 +8,7 @@
 
 /* Prototypes for all the test functions */
 void test_bus(void);
-void test_book(void);
+//void test_book(void);
 void test_read_number(void);
 void test_read_name(void);
 void test_status(void);
@@ -27,7 +27,7 @@ int main() {
 
   /* Add your test functions in this format for testing*/
   CU_add_test(suite,"bus",test_bus);
-  CU_add_test(suite,"book",test_book);
+  //CU_add_test(suite,"book",test_book);
   CU_add_test(suite,"read_number",test_read_number);
   CU_add_test(suite,"read_name",test_read_name);
   CU_add_test(suite,"status",test_status);
@@ -53,11 +53,11 @@ void test_bus(void)
     CU_ASSERT(1==bus(1));
 }
 
-void test_book(void)
+/*void test_book(void)
 {
     CU_ASSERT(1==book("1",1,"Dhyan"));
 
-}
+}*/
 void test_status(void)
 {
   CU_ASSERT(1==status(1));
