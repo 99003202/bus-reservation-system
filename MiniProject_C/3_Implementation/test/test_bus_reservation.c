@@ -57,7 +57,7 @@ void test_login(void)
     CU_ASSERT(1==login(username,password));
     char username1[100]="user";
     char password1[100]="abc";
-    CU_ASSERT(0==login(username,password));
+    CU_ASSERT(0==login(username1,password1));
 
 
 }
