@@ -50,7 +50,7 @@ int main() {
 }
 
 /* Write all the test functions */
-void test_book(void)
+void test_login(void)
 {
     char username[100]="user";
     char password[100]="pass";
