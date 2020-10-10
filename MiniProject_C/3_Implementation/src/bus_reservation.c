@@ -94,10 +94,11 @@ int booking(int busno)
 	printf("\n\t\t\t\tNumber of Tickets:----->");
 	scanf("%d",&booking);
 	printf("\n");
+	char numstr[100];
 	//itoa(busno,numstr,10);
 	sprintf(numstr,"%d",busno);
 	int number;
-	char *names;
+	char names[100];
 
 	if(booking<=32&&booking>0){
 
@@ -384,8 +385,8 @@ fclose(b);
 printf("\n\n");
     printf("======================================================================================================\n");
 
- printf("\t\t\t\tYour Refund Has been Issued\t\t\t\n" );
-    printf("======================================================================================================\n");
+ printf("\t\t\t\tYour Refund Has been Issued\t\t\t\n \t\t\t\t  Cancellation Complete!!!" );
+    printf("\n======================================================================================================\n");
 
 return 1;
 }

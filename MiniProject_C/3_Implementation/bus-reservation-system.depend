@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1602307465 source:c:\users\dhyan nandan\desktop\bus-reservation-system\miniproject_c\3_implementation\src\bus_reservation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"bus_reservation.h"
+
+1602244526 c:\users\dhyan nandan\desktop\bus-reservation-system\miniproject_c\3_implementation\inc\bus_reservation.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1602307864 source:c:\users\dhyan nandan\desktop\bus-reservation-system\miniproject_c\3_implementation\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"bus_reservation.h"
+

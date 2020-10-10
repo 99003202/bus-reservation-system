@@ -72,7 +72,7 @@ int main()
     }while(num != 5);
          system("CLS");
          printf("\t----------------------------------------------------------------------------------------------------------\n");
-         printf("\t\t\t\t\tThank You For Using This System\t\t\t\t\t\t\n");
+         printf("\n\n\n\n\n\t\t\t\t\tThank You For Using This System\t\t\t\t\t\t\n");
          printf("\t----------------------------------------------------------------------------------------------------------\n");
 
 
